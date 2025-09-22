@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Invitación Especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="floating-flowers">
+        <svg class="flower" width="30" height="30" viewBox="0 0 30 30">
+            <circle cx="15" cy="8" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="22" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="22" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="8" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="15" r="3" fill="#ffd700" opacity="0.8"/>
+        </svg>
+        <svg class="flower" width="25" height="25" viewBox="0 0 30 30">
+            <circle cx="15" cy="8" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="22" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="22" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="8" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="15" r="3" fill="#ffd700" opacity="0.8"/>
+        </svg>
+        <svg class="flower" width="35" height="35" viewBox="0 0 30 30">
+            <circle cx="15" cy="8" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="22" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="22" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="8" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="15" r="3" fill="#ffd700" opacity="0.8"/>
+        </svg>
+        <svg class="flower" width="28" height="28" viewBox="0 0 30 30">
+            <circle cx="15" cy="8" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="22" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="22" r="4" fill="#ff69b4" opacity="0.7"/>
+            <circle cx="8" cy="15" r="4" fill="#ff1493" opacity="0.7"/>
+            <circle cx="15" cy="15" r="3" fill="#ffd700" opacity="0.8"/>
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="hero-section">
+            <h1 class="main-title">Tengo una sorpresa para vos</h1>
+            
+            <div class="envelope-container" onclick="openEnvelope()">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="letter">
+                        <span>Hacé clic para abrir 💕</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="click-hint">Hacé clic en el sobre para descubrir la sorpresa</p>
+        </div>
+
+        <div class="content-section" id="content">
+            <div class="message-card">
+                <h2 class="main-message">Me encantaría compartir una merienda con vos...</h2>
+                
+                <div class="options-grid">
+                    <div class="option-card">
+                        <span class="option-icon">☕</span>
+                        <h3 class="option-title">Café con medialunas</h3>
+                        <p class="option-description">Un momento perfecto para conversar y disfrutar juntos</p>
+                    </div>
+                    
+                    <div class="option-card">
+                        <span class="option-icon">🍪</span>
+                        <h3 class="option-title">Merienda con galletitas caseras</h3>
+                        <p class="option-description">Dulces momentos hechos con amor</p>
+                    </div>
+                    
+                    <div class="option-card">
+                        <span class="option-icon">🌳</span>
+                        <h3 class="option-title">Picnic en el parque</h3>
+                        <p class="option-description">Naturaleza, aire fresco y tu compañía</p>
+                    </div>
+                    
+                </div>
+                
+                <button class="accept-button" onclick="acceptInvitation()">¡Obvio que voy!</button>
+                
+                <div class="interactive-section hidden" id="interactiveSection">
+                    <h3 class="section-title">¡Perfecto! Ahora elijamos los detalles 💕</h3>
+                    
+                    <div class="form-container">
+                        <div class="form-group">
+                            <label for="dateSelect">¿Qué día te viene bien?</label>
+                            <select id="dateSelect" class="form-input">
+                                <option value="">Elegí una fecha...</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeSelect">¿A qué hora?</label>
+                            <select id="timeSelect" class="form-input">
+                                <option value="">Elegí un horario...</option>
+                                <option value="14:00">15:00  - Merienda temprana</option>
+                                <option value="15:30">17:00 PM - Hora clásica</option>
+                                <option value="17:00">18:00 PM - Merienda mientars vemos el atardecer</option>
+                                <option value="18:30">21:30 PM - Cena</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="activitySelect">¿Qué actividad preferís?</label>
+                            <select id="activitySelect" class="form-input">
+                                <option value="">Elegí una opción...</option>
+                                <option value="cafe">Café con medialunas</option>
+                                <option value="galletitas">Merienda con criollitos</option>
+                                <option value="picnic">Picnic en el parque</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="messageInput">¿Algo especial que quieras agregar?</label>
+                            <textarea id="messageInput" class="form-input" placeholder="Escribí lo que quieras... (opcional)" rows="3"></textarea>
+                        </div>
+                        
+                        <button class="confirm-button" onclick="confirmDate()">¡Confirmar nuestra cita! 💖</button>
+                    </div>
+                </div>
+                
+                <div class="confirmation-message hidden" id="confirmationMessage">
+                    <div class="confirmation-card">
+                        <h3>¡Cita confirmada! 🎉</h3>
+                        <div class="date-details" id="dateDetails"></div>
+                        <p class="excitement-message">¡No puedo esperar a verte! 😊</p>
+                        
+                        <div class="contact-info">
+                            <h4 style="font-family: 'Dancing Script', cursive; font-size: 1.4rem; color: #495057; margin-bottom: 15px;">Para confirmar definitivamente, contactame:</h4>
+                            
+                            <div class="contact-buttons">
+                                <a href="https://wa.me/5493584010796?text=¡Hola!%20Quiero%20confirmar%20nuestra%20cita%20💕" target="_blank" rel="noopener noreferrer" class="contact-button whatsapp-button">
+                                    📱 WhatsApp: 358-4010796
+                                </a>
+                                
+                                <a href="https://instagram.com/ffeli.leal" target="_blank" rel="noopener noreferrer" class="contact-button instagram-button">
+                                    📸 Instagram: @ffeli.leal
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <button class="share-button" onclick="shareDate()">📱 Compartir detalles</button>
+                    </div>
+                </div>
+                
+                <p class="final-message">Lo importante no es el plan, sino compartirlo con vos 💕</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="confetti hidden" id="confetti"></div>
+    <div class="surprise-sparkles hidden" id="sparkles"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
