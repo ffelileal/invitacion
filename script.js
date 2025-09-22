@@ -1,4 +1,4 @@
-function openEnvelope() {
+  function openEnvelope() {
             const envelope = document.getElementById('envelope');
             const content = document.getElementById('content');
             
@@ -28,7 +28,7 @@ function openEnvelope() {
             // Cambiar el texto del botón temporalmente
             const button = document.querySelector('.accept-button');
             const originalText = button.textContent;
-            button.textContent = 'OAAAAAAAAAAAAAAAA';
+            button.textContent = 'Me alegro que quieras :)';
             button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
             
             // Mostrar la sección interactiva después del confeti
@@ -146,7 +146,7 @@ function openEnvelope() {
             const dateDetails = document.getElementById('dateDetails');
             const detailItems = dateDetails.querySelectorAll('.detail-item');
             
-            let shareText = 'Juntada confirmada!\n\n';
+            let shareText = 'Ahora a esperar para juntarnos\n\n';
             
             detailItems.forEach(item => {
                 const label = item.querySelector('.detail-label').textContent;
@@ -154,14 +154,14 @@ function openEnvelope() {
                 shareText += `${label} ${value}\n`;
             });
             
-            shareText += '\n¡No puedo esperar a verte! 😊\n\n';
+            shareText += '\nEspero con ansias el día! 😊\n\n';
             shareText += '📞 Para confirmar: WhatsApp 358-4010796\n';
             shareText += '📸 Instagram: @ffeli.leal';
             
             // Intentar usar la API de compartir nativa si está disponible
             if (navigator.share) {
                 navigator.share({
-                    title: 'Una juntada chill :)',
+                    title: 'Una juntada distinta',
                     text: shareText
                 }).catch(err => {
                     // Si falla, copiar al portapapeles
@@ -287,5 +287,17 @@ function openEnvelope() {
             
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Efecto especial para la opción "Que vos elijas"
+        document.addEventListener('DOMContentLoaded', function() {
+            const activitySelect = document.getElementById('activitySelect');
+            
+            activitySelect.addEventListener('change', function() {
+                if (this.value === 'tu_eleccion') {
+                    // Crear un pequeño efecto de sparkles cuando selecciona esta opción
+                    createSparkles();
+                }
             });
         });
