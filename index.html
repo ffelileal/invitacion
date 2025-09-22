@@ -68,8 +68,8 @@
                     
                     <div class="option-card">
                         <span class="option-icon">🍪</span>
-                        <h3 class="option-title">Merienda con galletitas caseras</h3>
-                        <p class="option-description">unos criollos de la celeste uf</p>
+                        <h3 class="option-title">Merienda con cosas de la celeste</h3>
+                        <p class="option-description">Las mejores facturas del mundo</p>
                     </div>
                     
                     <div class="option-card">
@@ -77,16 +77,15 @@
                         <h3 class="option-title">Picnic en el parque</h3>
                         <p class="option-description">Naturaleza, aire fresco y tu compañía</p>
                     </div>
-
-                    <div class="option-card">
-                        <span class="option-icon">🌃</span>
-                        <h3 class="option-title">Noche de hamburguesas</h3>
-                        <p class="option-description">Unas hamburguesas con queso y vino blanco</p>
-                    </div>
                     
+                    <div class="option-card">
+                        <span class="option-icon">🎬</span>
+                        <h3 class="option-title">Una noche de películas con hamburguesas y vino</h3>
+                        <p class="option-description">Hamburguesas, dulces y muchi vino dulce</p>
+                    </div>
                 </div>
                 
-                <button class="accept-button" onclick="acceptInvitation()">Obvio que estoy!</button>
+                <button class="accept-button" onclick="acceptInvitation()">¡Obvio que voy!</button>
                 
                 <div class="interactive-section hidden" id="interactiveSection">
                     <h3 class="section-title">¡Perfecto! Ahora elijamos los detalles 💕</h3>
@@ -103,10 +102,9 @@
                             <label for="timeSelect">¿A qué hora?</label>
                             <select id="timeSelect" class="form-input">
                                 <option value="">Elegí un horario...</option>
-                                <option value="14:00">15:00  - Merienda temprana</option>
-                                <option value="15:30">17:00 PM - Hora clásica</option>
-                                <option value="17:00">18:00 PM - Merienda mientars vemos el atardecer</option>
-                                <option value="18:30">21:30 PM - Cena</option>
+                                <option value="15:30">17:30 - Hora clásica</option>
+                                <option value="17:00">18:00  - Merienda tardía</option>
+                                <option value="18:30">21:00 - cena</option>
                             </select>
                         </div>
                         
@@ -114,10 +112,10 @@
                             <label for="activitySelect">¿Qué actividad preferís?</label>
                             <select id="activitySelect" class="form-input">
                                 <option value="">Elegí una opción...</option>
-                                <option value="cafe">Café con medialunas</option>
-                                <option value="galletitas">Merienda con criollitos</option>
-                                <option value="picnic">Picnic en el parque</option>
-                                <option value="noche">Unas hamburguesas caseras</option>
+                                <option value="cafe">☕ Café con medialunas</option>
+                                <option value="galletitas">🍪 Merienda con cositas de la celeste</option>
+                                <option value="picnic">🌳 Picnic en el parque</option>
+                                <option value="pelicula">🎬 Una noche de películas con hamburguesas y vino</option>
                             </select>
                         </div>
                         
@@ -126,13 +124,13 @@
                             <textarea id="messageInput" class="form-input" placeholder="Escribí lo que quieras... (opcional)" rows="3"></textarea>
                         </div>
                         
-                        <button class="confirm-button" onclick="confirmDate()">Confrimar la juntada! 💖</button>
+                        <button class="confirm-button" onclick="confirmDate()">Confirmar el plan!</button>
                     </div>
                 </div>
                 
                 <div class="confirmation-message hidden" id="confirmationMessage">
                     <div class="confirmation-card">
-                        <h3>Plan confirmado! 🎉</h3>
+                        <h3>¡Cita confirmada! 🎉</h3>
                         <div class="date-details" id="dateDetails"></div>
                         <p class="excitement-message">¡No puedo esperar a verte! 😊</p>
                         
@@ -140,7 +138,7 @@
                             <h4 style="font-family: 'Dancing Script', cursive; font-size: 1.4rem; color: #495057; margin-bottom: 15px;">Para confirmar definitivamente, contactame:</h4>
                             
                             <div class="contact-buttons">
-                                <a href="https://wa.me/5493584010796?text=¡Hola!%20Quiero%20confirmar%20nuestra%20juntada%20" target="_blank" rel="noopener noreferrer" class="contact-button whatsapp-button">
+                                <a href="https://wa.me/5493584010796?text=¡Hola!%20Quiero%20confirmar%20nuestra%20juntada" target="_blank" rel="noopener noreferrer" class="contact-button whatsapp-button">
                                     📱 WhatsApp: 358-4010796
                                 </a>
                                 
@@ -154,13 +152,14 @@
                     </div>
                 </div>
                 
-                <p class="final-message">Lo importante no es el plan, sino compartirlo con vos 💕</p>
+                <p class="final-message">Lo importante no es el plan, sino disfrutar un momento juntos</p>
             </div>
         </div>
     </div>
 
     <div class="confetti hidden" id="confetti"></div>
     <div class="surprise-sparkles hidden" id="sparkles"></div>
+
 
     <script src="script.js"></script>
 </body>

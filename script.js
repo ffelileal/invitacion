@@ -28,7 +28,7 @@ function openEnvelope() {
             // Cambiar el texto del botón temporalmente
             const button = document.querySelector('.accept-button');
             const originalText = button.textContent;
-            button.textContent = '¡Qué alegría! 💕';
+            button.textContent = 'OAAAAAAAAAAAAAAAA';
             button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
             
             // Mostrar la sección interactiva después del confeti
@@ -83,7 +83,7 @@ function openEnvelope() {
             
             // Validar que se hayan seleccionado los campos obligatorios
             if (!dateSelect.value || !timeSelect.value || !activitySelect.value) {
-                alert('Por favor completá la fecha, hora y actividad para confirmar nuestra juntada');
+                alert('Por favor completá la fecha, hora y actividad para confirmar nuestra cita 💕');
                 return;
             }
             
@@ -146,7 +146,7 @@ function openEnvelope() {
             const dateDetails = document.getElementById('dateDetails');
             const detailItems = dateDetails.querySelectorAll('.detail-item');
             
-            let shareText = 'Tenemos un plan confirmado! \n\n';
+            let shareText = 'Juntada confirmada!\n\n';
             
             detailItems.forEach(item => {
                 const label = item.querySelector('.detail-label').textContent;
@@ -161,7 +161,7 @@ function openEnvelope() {
             // Intentar usar la API de compartir nativa si está disponible
             if (navigator.share) {
                 navigator.share({
-                    title: 'Una juntada chill',
+                    title: 'Una juntada chill :)',
                     text: shareText
                 }).catch(err => {
                     // Si falla, copiar al portapapeles
@@ -176,7 +176,7 @@ function openEnvelope() {
         function copyToClipboard(text) {
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(text).then(() => {
-                    alert('¡Detalles copiados al portapapeles!');
+                    alert('¡Detalles copiados al portapapeles! 📋💕');
                 }).catch(() => {
                     showTextToCopy(text);
                 });
