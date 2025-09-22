@@ -83,7 +83,7 @@ function openEnvelope() {
             
             // Validar que se hayan seleccionado los campos obligatorios
             if (!dateSelect.value || !timeSelect.value || !activitySelect.value) {
-                alert('Por favor completá la fecha, hora y actividad para confirmar nuestra cita 💕');
+                alert('Por favor completá la fecha, hora y actividad para confirmar nuestra juntada');
                 return;
             }
             
@@ -146,7 +146,7 @@ function openEnvelope() {
             const dateDetails = document.getElementById('dateDetails');
             const detailItems = dateDetails.querySelectorAll('.detail-item');
             
-            let shareText = '💕 ¡Tenemos una cita confirmada! 💕\n\n';
+            let shareText = 'Tenemos un plan confirmado! \n\n';
             
             detailItems.forEach(item => {
                 const label = item.querySelector('.detail-label').textContent;
@@ -161,7 +161,7 @@ function openEnvelope() {
             // Intentar usar la API de compartir nativa si está disponible
             if (navigator.share) {
                 navigator.share({
-                    title: 'Nuestra cita especial 💕',
+                    title: 'Una juntada chill',
                     text: shareText
                 }).catch(err => {
                     // Si falla, copiar al portapapeles
@@ -176,7 +176,7 @@ function openEnvelope() {
         function copyToClipboard(text) {
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(text).then(() => {
-                    alert('¡Detalles copiados al portapapeles! 📋💕');
+                    alert('¡Detalles copiados al portapapeles!');
                 }).catch(() => {
                     showTextToCopy(text);
                 });
